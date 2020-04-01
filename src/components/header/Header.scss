@@ -1,0 +1,19 @@
+.main-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 8vh;
+  padding: 0 20px;
+
+  a,
+  span {
+    font-size: 1.2em;
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    color: grey;
+  }
+}
