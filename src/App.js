@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Route } from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Route exact path='/' render={
+          () => <h1>Sup</h1>
+      }/>
+    <Route exact path='/history' render={
+          () => <h1>Work History</h1>
+      }/>
+    <Route exact path='/skills' render={
+          () => <h1>Skills</h1>
+      }/>
+    <Route exact path='/bonus-features' render={
+          () => <h1>Bonus Features</h1>
+      }/>
+    <Route exact path='/contact' render={
+          () => <h1>Contact</h1>
+      }/>
+    <Route exact path='/resume' render={
+          () => <h1>Resume</h1>
+      }/>
+    </React.Fragment>
   );
 }
 
