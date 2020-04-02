@@ -21,6 +21,31 @@
   font-size: 1.4em;
 }
 
+.workBlockContainer {
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    height: 20vh;
+    width: 30vw;
+    border: solid 1px black;
+  }
+}
+
+.workTimerContent {
+  p {
+    margin: 0;
+    padding: 10px 0;
+    text-align: center;
+  }
+}
+
 .homeBlockContainer {
   height: 30vh;
   display: flex;
