@@ -33,17 +33,17 @@ export const COPY = {
       "I'm a storyteller, a team player and an innovator.",
     ],
     DETAILS: {
-      "storyteller": [
+      "Storyteller": [
         "I'm a storyteller at heart, which helps me empathize with the end user of the platform or application that I'm building. Understanding their needs and desires allows me to make value-driven programming and design decisions.",
         "My communication skills allow me to bridge the gap between business goals, operations and user needs, and the aspirational designs. This keeps everyone honest and unifies the team with realistic goals, happy comprimise, and minimizing surprises.",
       ],
-      "teamPlayer": [
+      "Team Player": [
         `"A great team player", "helping attitude", and "very positive person to be around" are the words of my peers when they were evalutating me on "Team Building & Culture". My growth mindset and positive spirit are just a few ways I support my team.`,
         "I treat my peers with respect, provide support to my teammates when working through tough design problems, and am very receptive to feeback from the team.",
         "I run a department-wide bookclub! We're currently working through the newest edition of Effective Python in order to help us all improve our codebase.",
         "I regularly participate in our scrum ceremonies and run meetings, as well as serve in our criticals rotation."
       ],
-      "innovator": [
+      "Innovator": [
         "Creative problem solving is my bread and butter. Whether it's designing a way to audit requests to and responses from our API, or how to recursively flatten a nested dictionary for conversion into a CSV, I strive to find the most efficient way to solve the problem, while still keeping the end user top of mind.",
         "I'm considered a subject-matter expert for many aspects of our platform and I help other teams find solutions for integrating with our platform to solve their business problems.",
         "I've taken the lead on improving our team's workflows and encouraging thorough documentation, helping reduce code-review latency and allowing others to work independently and minimizing lost engineering time due redundent knowledge transfer meetings."

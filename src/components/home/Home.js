@@ -2,6 +2,7 @@ import React from 'react'
 import { COPY } from '../../constants/constants'
 import { formatPageCopy } from '../../utils'
 import '../../styles/formatting.scss'
+import { DetailBlock } from './DetailBlock'
 
 export class HomePage extends React.Component {
 
@@ -10,28 +11,25 @@ export class HomePage extends React.Component {
     hoveredAttribute: ''
   };
 
-  createBlurb = attribute => {
+  handleSetDetails = attribute => {
     this.setState(
       {
         isDisplayingDetails: true,
         hoveredAttribute: attribute
       }
     )
-    console.log(this.state)
   }
 
-  removeBlurb = () => {
+  handleRemoveDetails = () => {
     this.setState(
       {
         isDisplayingDetails: false,
         hoveredAttribute: ''
       }
     )
-    console.log(this.state)
   }
 
-  getDetails = hoveredAttribute => {
-
+  handleGetDetails = hoveredAttribute => {
     const copyDetailsArray = COPY.HOME.DETAILS[hoveredAttribute]
 
     return (
@@ -42,26 +40,26 @@ export class HomePage extends React.Component {
     )
   }
 
+  generateDetailsBlocks = detailsDictionary => (
+    Object.keys(detailsDictionary).map((detailKey, index) => (
+      <DetailBlock key={detailKey} handleSetDetails={this.handleSetDetails} handleRemoveDetails={this.handleRemoveDetails} detailName={detailKey}/>
+    ))
+  )
+
   render() {
     return (
       <React.Fragment>
         { formatPageCopy(COPY.HOME) }
         <div className='homeBlockContainer'>
-          <div className='blockContent' onMouseEnter={ () => this.createBlurb('storyteller')} onMouseLeave={this.removeBlurb}>
-            <p>Storyteller</p>
-          </div>
-          <div className='blockContent' onMouseEnter={() => this.createBlurb('teamPlayer')} onMouseLeave={this.removeBlurb}>
-            <p>Team Player</p>
-          </div>
-          <div className='blockContent' onMouseEnter={() => this.createBlurb('innovator')} onMouseLeave={this.removeBlurb}>
-            <p>Innovator</p>
-          </div>
+          {this.generateDetailsBlocks(COPY.HOME.DETAILS)}
         </div>
-        {this.state.isDisplayingDetails && (
-          <div className='homeDetailsContainer'>
-            {this.getDetails(this.state.hoveredAttribute)}
-          </div>
-        )}
+        {
+          this.state.isDisplayingDetails && (
+            <div className='homeDetailsContainer'>
+              {this.handleGetDetails(this.state.hoveredAttribute)}
+            </div>
+          )
+        }
       </React.Fragment>
     )
   }
