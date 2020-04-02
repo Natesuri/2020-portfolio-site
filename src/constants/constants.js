@@ -34,7 +34,7 @@ export const COPY = {
     ]
   },
   HISTORY: {
-    HEADER: "I'm a Software Engineer with a background in Filmmaking",
+    HEADER: "I'm a Software Engineer with a background in Filmmaking.",
     MAIN: [
       "2020: I'm currently building APIs and designing new domains for the Contracts and Billing team within Wayfair's International Supply Chain department. My team and I serve up GraphQL APIs that are written in Python, built in Docker, and deployed with Kubernetes. Other teams utilize our platform to get information with the ISC Domain. For example, they'll query our APIs for information regarding carrier and supplier contracts, and quotes and estimations for shipping containers.",
       "2019: I joined Wayfair just 6 weeks after the birth of my first child. I quickly learned the stack and joined the Asia Logistics team within the International Supply Chain department. While there, I built and improved on several different internal full-stack applications written in  React and PHP. These applications focused on increasing the efficiency of our operations team, and automating time-consuming logistics tasks.",
@@ -43,25 +43,40 @@ export const COPY = {
     ]
   },
   PERSONAL: {
-    HEADER: "So, we're not just robots.",
+    HEADER: "So, we're not robots.",
     MAIN: [
       "Almost everyone has a life outside of work. Below are a few of the things I do in my spare time:",
       "Play with my son.",
-      "Writing software with my wife.",
-      "Analog & digital photography.",
+      "Write software with my wife.",
+      "Analog and digital photography.",
       "Piano, keyboards and songwriting.",
-      "Hiking and Camping.",
-      "Cooking.",
-      "Building a tiny house.",
-      "Drinking sake."
+      "Hike and go camping.",
+      "Cook.",
+      "Build a tiny house.",
+      "Drink sake."
     ]
   },
-  SKILLS: {
-    HEADER: "",
-    MAIN: [""]
+  RESUME: {
+    HEADER: "Download my resume with the link below.",
   },
   CONTACT: {
-    HEADER: "",
-    MAIN: [""]
+    HEADER: "Get in touch.",
+    MAIN: [
+      "You can reach me via any of the means below.",
+    ],
+    LINK: [
+      {
+        link: "mailto:natesuri@gmail.com?Subject=Hey Nate",
+        text:  "natesuri [at] gmail [dot] com",
+      },
+      {
+        link: "https://www.linkedin.com/in/natesuri",
+        text: "LinkedIn"
+      },
+      {
+        link: "https://github.com/Natesuri",
+        text: "Github"
+      }
+    ]
   }
 }
