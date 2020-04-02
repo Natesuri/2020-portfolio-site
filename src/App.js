@@ -6,28 +6,30 @@ import { HomePage } from './components/home/Home'
 import { WorkHistory } from './components/history/WorkHistory'
 import { Personal } from './components/personal/Personal'
 import { Header } from './components/header/Header'
+import { NAV } from './constants/constants'
+
 function App() {
   return (
     <React.Fragment>
       <Route path='/' render={
             () => <Header/>
         }/>
-      <Route exact path='/' render={
+      <Route exact path={NAV.HOME.route} render={
             () => <HomePage/>
         }/>
-      <Route exact path='/history' render={
+      <Route exact path={NAV.HISTORY.route} render={
             () => <WorkHistory/>
         }/>
-      <Route exact path='/skills' render={
+      { /* <Route exact path='/skills' render={
             () => <h1>Skills</h1>
+        }/> */ }
+      <Route exact path={NAV.PERSONAL.route} render={
             () => <Personal/>
         }/>
-      <Route exact path='/bonus-features' render={
-        }/>
-      <Route exact path='/contact' render={
+      <Route exact path={NAV.CONTACT.route} render={
             () => <h1>Contact</h1>
         }/>
-      <Route exact path='/resume' render={
+      <Route exact path={NAV.RESUME.route} render={
             () => <h1>Resume</h1>
         }/>
     </React.Fragment>

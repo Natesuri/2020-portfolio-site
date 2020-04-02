@@ -13,9 +13,9 @@ export const Header = () => (
         <Link to={ NAV.HISTORY.route }>
           { NAV.HISTORY.name }
         </Link>
-        <Link to={ NAV.SKILLS.route }>
+        { /* <Link to={ NAV.SKILLS.route }>
           { NAV.SKILLS.name }
-        </Link>
+        </Link> */ }
         <Link to={ NAV.PERSONAL.route }>
           { NAV.PERSONAL.name }
         </Link>
