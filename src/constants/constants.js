@@ -46,14 +46,14 @@ export const COPY = {
     HEADER: "So, we're not robots.",
     MAIN: [
       "Almost everyone has a life outside of work. Below are a few of the things I do in my spare time:",
-      "Play with my son.",
-      "Write software with my wife.",
-      "Analog and digital photography.",
-      "Piano, keyboards and songwriting.",
-      "Hike and go camping.",
-      "Cook.",
-      "Build a tiny house.",
-      "Drink sake."
+      "Play with my son. \u{1F476}",
+      "Write software with my wife. \u{1F5A5}",
+      "Analog and digital photography. \u{1F4F7}",
+      "Piano, keyboards and songwriting. \u{266D}",
+      "Hike and go camping. \u{1F3D5}",
+      "Cook. \u{1F373}",
+      "Build a tiny house. \u{1F3E0}",
+      "Drink sake. 日本酒"
     ]
   },
   RESUME: {
