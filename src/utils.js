@@ -8,6 +8,8 @@ export const formatPageCopy = copyDictionary => {
         return formatHeaderCopy(copyType, copyContent)
       case 'MAIN':
         return formatMainCopy(copyType, copyContent)
+      case 'LINK':
+        return formatLinkList(copyType, copyContent)
       default:
         return null
     }
@@ -23,3 +25,15 @@ const formatMainCopy = (copyType, copyContent) => {
     <p key={copyType + index} className='pageBody'>{copySegment}</p>
   ))
 }
+
+const formatLinkList = (copyType, copyContent) => {
+  return copyContent.map((linkDict, index) => (
+    <p className='pageBody'><a key={copyType + index} href={linkDict.link}>{linkDict.text}</a></p>
+  ))
+}
+
+export const getResume = () => (
+  <p className='pageBody'>
+    <a href="Nate_Suri_Software_Engineer_2020.pdf" download>Click Here!</a>
+  </p>
+)

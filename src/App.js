@@ -5,6 +5,8 @@ import { Route } from 'react-router-dom'
 import { HomePage } from './components/home/Home'
 import { WorkHistory } from './components/history/WorkHistory'
 import { Personal } from './components/personal/Personal'
+import { Contact } from './components/contact/Contact'
+import { Resume } from './components/resume/Resume'
 import { Header } from './components/header/Header'
 import { NAV } from './constants/constants'
 
@@ -27,10 +29,10 @@ function App() {
             () => <Personal/>
         }/>
       <Route exact path={NAV.CONTACT.route} render={
-            () => <h1>Contact</h1>
+            () => <Contact/>
         }/>
       <Route exact path={NAV.RESUME.route} render={
-            () => <h1>Resume</h1>
+            () => <Resume/>
         }/>
     </React.Fragment>
   );

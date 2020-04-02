@@ -3,6 +3,16 @@
   margin: 20px 25% 20px 3%;
   text-align: justify;
   font-size: 1.2em;
+
+  a {
+    text-decoration: none;
+    font-weight: 800;
+    color: blue;
+  }
+
+  a:hover {
+    color: grey;
+  }
 }
 
 .pageHeader {
