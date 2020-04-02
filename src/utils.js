@@ -4,22 +4,22 @@ import './styles/formatting.scss'
 export const formatPageCopy = copyDictionary => {
   return Object.entries(copyDictionary).map(([copyType, copyContent]) => {
     switch(copyType) {
-      case 'FIRST':
-        return formatHeaderCopy(copyContent)
+      case 'HEADER':
+        return formatHeaderCopy(copyType, copyContent)
       case 'MAIN':
-        return formatMainCopy(copyContent)
+        return formatMainCopy(copyType, copyContent)
       default:
         return null
     }
   })
 }
 
-const formatHeaderCopy = headerCopy => {
-  return <h4 className='pageHeader'>{headerCopy}</h4>
+const formatHeaderCopy = (copyType, headerCopy) => {
+  return <h4 key={copyType} className='pageHeader'>{headerCopy}</h4>
 }
 
-const formatMainCopy = copyArray => {
-  return copyArray.map(copySegment => (
-    <p className='pageBody'>{copySegment}</p>
+const formatMainCopy = (copyType, copyContent) => {
+  return copyContent.map((copySegment, index) => (
+    <p key={copyType + index} className='pageBody'>{copySegment}</p>
   ))
 }
