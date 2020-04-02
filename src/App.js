@@ -4,6 +4,7 @@ import { Route } from 'react-router-dom'
 
 import { HomePage } from './components/home/Home'
 import { WorkHistory } from './components/history/WorkHistory'
+import { Personal } from './components/personal/Personal'
 import { Header } from './components/header/Header'
 function App() {
   return (
@@ -19,9 +20,9 @@ function App() {
         }/>
       <Route exact path='/skills' render={
             () => <h1>Skills</h1>
+            () => <Personal/>
         }/>
       <Route exact path='/bonus-features' render={
-            () => <h1>Bonus Features</h1>
         }/>
       <Route exact path='/contact' render={
             () => <h1>Contact</h1>
