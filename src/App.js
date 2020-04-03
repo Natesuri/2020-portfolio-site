@@ -13,27 +13,12 @@ import { NAV } from './constants/constants'
 function App() {
   return (
     <React.Fragment>
-      <Route path='/' render={
-            () => <Header/>
-        }/>
-      <Route exact path={NAV.HOME.route} render={
-            () => <HomePage/>
-        }/>
-      <Route exact path={NAV.HISTORY.route} render={
-            () => <WorkHistory/>
-        }/>
-      { /* <Route exact path='/skills' render={
-            () => <h1>Skills</h1>
-        }/> */ }
-      <Route exact path={NAV.PERSONAL.route} render={
-            () => <Personal/>
-        }/>
-      <Route exact path={NAV.CONTACT.route} render={
-            () => <Contact/>
-        }/>
-      <Route exact path={NAV.RESUME.route} render={
-            () => <Resume/>
-        }/>
+      <Route path='/' component={Header}/>
+      <Route exact path={NAV.HOME.route} component={HomePage}/>
+      <Route exact path={NAV.HISTORY.route} component={WorkHistory}/>
+      <Route exact path={NAV.PERSONAL.route} component={Personal}/>
+      <Route exact path={NAV.CONTACT.route} component={Contact}/>
+      <Route exact path={NAV.RESUME.route} component={Resume}/>
     </React.Fragment>
   );
 }
