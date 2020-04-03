@@ -1,14 +1,13 @@
 import React from 'react'
 import { COPY } from '../../constants/constants'
 import { formatPageCopy } from '../../utils'
-import '../../styles/formatting.scss'
 import { DetailBlock } from './DetailBlock'
 
 export class HomePage extends React.Component {
 
   state = {
-    isDisplayingDetails: false,
-    hoveredAttribute: ''
+    isDisplayingDetails: true,
+    hoveredAttribute: "Storyteller"
   };
 
   handleSetDetails = attribute => {
@@ -16,15 +15,6 @@ export class HomePage extends React.Component {
       {
         isDisplayingDetails: true,
         hoveredAttribute: attribute
-      }
-    )
-  }
-
-  handleRemoveDetails = () => {
-    this.setState(
-      {
-        isDisplayingDetails: false,
-        hoveredAttribute: ''
       }
     )
   }
@@ -42,7 +32,7 @@ export class HomePage extends React.Component {
 
   generateDetailsBlocks = detailsDictionary => (
     Object.keys(detailsDictionary).map((detailKey, index) => (
-      <DetailBlock key={detailKey} handleSetDetails={this.handleSetDetails} handleRemoveDetails={this.handleRemoveDetails} detailName={detailKey}/>
+      <DetailBlock key={detailKey} handleSetDetails={this.handleSetDetails} detailName={detailKey} activeBlock={this.state.hoveredAttribute}/>
     ))
   )
 
