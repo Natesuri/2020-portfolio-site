@@ -13,7 +13,9 @@ export const Header = (props) => {
           <NavItem activePath={props.history.location.pathname} page={NAV.HISTORY}/>
           <NavItem activePath={props.history.location.pathname} page={NAV.PERSONAL}/>
           <NavItem activePath={props.history.location.pathname} page={NAV.CONTACT}/>
-          <NavItem activePath={props.history.location.pathname} page={NAV.RESUME}/>
+          <a href="Nate_Suri_Software_Engineer_2020.pdf" download>
+            { NAV.RESUME.name }
+          </a>
         </nav>
       </header>
     )

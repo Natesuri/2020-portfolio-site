@@ -31,9 +31,3 @@ const formatLinkList = (copyType, copyContent) => {
     <p className='pageBody'><a key={copyType + index} href={linkDict.link}>{linkDict.text}</a></p>
   ))
 }
-
-export const getResume = () => (
-  <p className='pageBody'>
-    <a href="Nate_Suri_Software_Engineer_2020.pdf" download>Click Here!</a>
-  </p>
-)
