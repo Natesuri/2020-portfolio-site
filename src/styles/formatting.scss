@@ -1,3 +1,9 @@
+@import './colors';
+
+body {
+  background: $white;
+}
+
 .pageBody {
   display: block;
   margin: 20px 25% 20px 3%;
@@ -7,11 +13,11 @@
   a {
     text-decoration: none;
     font-weight: 800;
-    color: blue;
+    color: $blue;
   }
 
   a:hover {
-    color: grey;
+    color: $grey;
   }
 }
 
@@ -34,7 +40,7 @@
     margin: 10px;
     height: 20vh;
     width: 30vw;
-    border: solid 1px black;
+    border: solid 1px $blackish;
   }
 }
 
@@ -59,14 +65,14 @@
     margin: 10px;
     height: 20vh;
     width: 30vw;
-    border: solid 1px black;
+    border: solid 1px $blackish;
     transition: background-color 0.5s;
   }
 }
 
 .blockContent {
   &.active {
-    background: yellow;
+    background: $yellow;
   }
 
   p {
@@ -84,6 +90,6 @@
   p {
     text-align: justify;
     font-size: 1.1em;
-    width: 50vw;
+    width: 40vw;
   }
 }
