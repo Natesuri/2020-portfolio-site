@@ -11,6 +11,10 @@
     margin: 0 15px;
     text-decoration: none;
     color: black;
+
+    &.active {
+      text-decoration: underline;
+    }
   }
 
   a:hover {
