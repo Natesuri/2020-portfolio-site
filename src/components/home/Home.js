@@ -40,16 +40,18 @@ export class HomePage extends React.Component {
     return (
       <React.Fragment>
         { formatPageCopy(COPY.HOME) }
-        <div className='homeBlockContainer'>
-          {this.generateDetailsBlocks(COPY.HOME.DETAILS)}
+        <div className='homeBlockAndDetailsContainer'>
+          <div className='homeBlockContainer'>
+            {this.generateDetailsBlocks(COPY.HOME.DETAILS)}
+          </div>
+          {
+            this.state.isDisplayingDetails && (
+              <div className='homeDetailsContainer'>
+                {this.handleGetDetails(this.state.hoveredAttribute)}
+              </div>
+            )
+          }
         </div>
-        {
-          this.state.isDisplayingDetails && (
-            <div className='homeDetailsContainer'>
-              {this.handleGetDetails(this.state.hoveredAttribute)}
-            </div>
-          )
-        }
       </React.Fragment>
     )
   }

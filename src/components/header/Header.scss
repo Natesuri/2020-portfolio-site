@@ -21,3 +21,29 @@
     color: grey;
   }
 }
+
+@media (max-width: 700px) {
+  .main-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    padding: 0 20px;
+
+    a,
+    span {
+      font-size: 12px;
+      margin: 0 5px;
+      text-decoration: none;
+      color: black;
+
+      &.active {
+        text-decoration: underline;
+      }
+    }
+
+    a:hover {
+      color: grey;
+    }
+  }
+}

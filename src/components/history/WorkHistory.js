@@ -11,11 +11,11 @@ const generateTenureTimers = events => {
 
 export const WorkHistory = () => {
   return(
-    <React.Fragment>
-      { formatPageCopy(COPY.HISTORY) }
+    <div className='workHistoryContentContainer'>
+      { formatPageCopy(COPY.HISTORY, true) }
       <div className='workBlockContainer'>
         { generateTenureTimers(COPY.HISTORY.EVENTS) }
       </div>
-    </React.Fragment>
+    </div>
   )
 }
