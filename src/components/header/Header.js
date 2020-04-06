@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { NAV } from '../../constants/constants'
 import { NavItem } from './NavItem'
 
