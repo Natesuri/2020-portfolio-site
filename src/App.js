@@ -1,25 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Route } from 'react-router-dom'
+
+import { HomePage } from './components/home/Home'
+import { WorkHistory } from './components/history/WorkHistory'
+import { Personal } from './components/personal/Personal'
+import { Contact } from './components/contact/Contact'
+import { Header } from './components/header/Header'
+import { NAV } from './constants/constants'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <Route path='/' component={Header}/>
+      <Route exact path={NAV.HOME.route} component={HomePage}/>
+      <Route exact path={NAV.HISTORY.route} component={WorkHistory}/>
+      <Route exact path={NAV.PERSONAL.route} component={Personal}/>
+      <Route exact path={NAV.CONTACT.route} component={Contact}/>
+    </React.Fragment>
   );
 }
 
