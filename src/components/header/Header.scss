@@ -1,3 +1,5 @@
+@import '../../styles/colors';
+
 .main-header {
   align-items: center;
   display: flex;
@@ -10,7 +12,7 @@
     font-size: 1.2em;
     margin: 0 15px;
     text-decoration: none;
-    color: black;
+    color: $blackish;
 
     &.active {
       text-decoration: underline;
@@ -24,26 +26,20 @@
 
 @media (max-width: 700px) {
   .main-header {
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    height: 8vh;
-    padding: 0 20px;
+    justify-content: center;
 
     a,
     span {
       font-size: 12px;
       margin: 0 5px;
-      text-decoration: none;
-      color: black;
-
-      &.active {
-        text-decoration: underline;
-      }
     }
+  }
+}
 
-    a:hover {
-      color: grey;
+@media (max-width: 400px) {
+  .main-header {
+    a {
+      font-size: 10px;
     }
   }
 }
